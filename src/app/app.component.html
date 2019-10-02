@@ -3,5 +3,11 @@
 <ul>
   <li *ngFor="let dato of datos; let i=index; trackBy: porCadaPersona">
     {{i}}: {{dato.id}}, {{dato.nombre}}
+
+    <div [ngSwitch]="dato.nombre">
+      <span *ngSwitchCase="'Javier'">¡El profe!</span>
+      <span *ngSwitchCase="'Pepe'">El típico</span>
+      <span *ngSwitchDefault>Otro que no conozco</span>
+    </div>
   </li>
 </ul>

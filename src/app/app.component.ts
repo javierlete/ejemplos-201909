@@ -7,7 +7,11 @@ import { Persona } from './persona';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  datos = [ { id: 1, nombre: 'Javier' }, { id: 2, nombre: 'Pepe'}];
+  datos = [
+    { id: 1, nombre: 'Javier' },
+    { id: 2, nombre: 'Pepe' },
+    { id: 3, nombre: 'Juan' }
+  ];
 
   porCadaPersona(indice: number, persona: Persona): number {
     console.log(indice, persona);
