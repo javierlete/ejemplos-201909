@@ -1,3 +1,4 @@
 <h2>Hola, {{persona.nombre}}</h2>
+<pre>{{ persona | keyvalue | slice:1 | json }}</pre>
 <button (click)="onClick(persona.nombre)">Dame el saludo</button>
 

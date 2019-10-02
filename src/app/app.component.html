@@ -1,8 +1,13 @@
-<h1>Ejemplos</h1>
+<h1>Ejemplos {{ fecha | date:'dd-MM-yyyy HH:mm:ss' }}</h1>
+<p>La fecha es {{ fecha | date:'short':'+0200':'es' }}</p>
+<p>El precio es {{ precio | currency:'€':'symbol':'1.2-2':'es' }}</p>
+<p>El número del precio es {{ precio | number:'1.2-2':'es' }}€</p>
+
+<pre>{{ datos | json }}</pre>
 
 <input #texto (input)="mensaje = texto.value" />
 
-<h2>Mensaje: {{mensaje}}</h2>
+<h2>Mensaje: {{mensaje | uppercase }}</h2>
 
 <app-hijo 
   [el-que-recibe-el-saludo]="{ id: 5, nombre: 'Prueba' }"
