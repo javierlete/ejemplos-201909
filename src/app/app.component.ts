@@ -12,6 +12,9 @@ registerLocaleData(localeFr, 'es');
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  variableQuePuedeSerNulo = {
+    valorInterno: 5
+  };
 
   datos = [
     { id: 1, nombre: 'Javier' },

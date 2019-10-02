@@ -3,6 +3,8 @@
 <p>El precio es {{ precio | currency:'€':'symbol':'1.2-2':'es' }}</p>
 <p>El número del precio es {{ precio | number:'1.2-2':'es' }}€</p>
 
+<p>Ejemplo de operador ?. {{variableQuePuedeSerNulo?.valorInterno}}</p>
+
 <pre>{{ datos | json }}</pre>
 
 <input #texto (input)="mensaje = texto.value" />
