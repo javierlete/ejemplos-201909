@@ -16,4 +16,8 @@ export class HijoComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClick(nombre: string) {
+    const mensaje = 'Hola, ' + nombre;
+    console.log('Se ha pulsado el botón', mensaje);
+  }
 }

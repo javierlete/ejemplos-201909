@@ -14,7 +14,7 @@ export class AppComponent {
   ];
 
   porCadaPersona(indice: number, persona: Persona): number {
-    console.log(indice, persona);
+    // console.log(indice, persona);
     return persona.id;
   }
 }
