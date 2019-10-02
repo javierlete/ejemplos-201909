@@ -1,12 +1,17 @@
 <h1>Ejemplos</h1>
 
-<app-hijo [el-que-recibe-el-saludo]="{ id: 5, nombre: 'Prueba' }"></app-hijo>
+<h2>Mensaje: {{mensaje}}</h2>
+
+<app-hijo 
+  [el-que-recibe-el-saludo]="{ id: 5, nombre: 'Prueba' }"
+  (saludo)="onSaludo($event)"></app-hijo>
 
 <ul>
   <li *ngFor="let dato of datos; let i=index; trackBy: porCadaPersona">
     {{i}}: {{dato.id}}, {{dato.nombre}}
 
-    <app-hijo [el-que-recibe-el-saludo]="dato"></app-hijo>
+    <app-hijo [el-que-recibe-el-saludo]="dato"
+    (saludo)="onSaludo($event)"></app-hijo>
 
     <div [ngSwitch]="dato.nombre">
       <span *ngSwitchCase="'Javier'">¡El profe!</span>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Persona } from '../persona';
 
 @Component({
@@ -10,6 +10,7 @@ export class HijoComponent implements OnInit {
 
   // tslint:disable-next-line: no-input-rename
   @Input('el-que-recibe-el-saludo') persona: Persona = { id: 0, nombre: 'Desconocido' };
+  @Output() saludo = new EventEmitter<string>();
 
   constructor() { }
 
@@ -19,5 +20,6 @@ export class HijoComponent implements OnInit {
   onClick(nombre: string) {
     const mensaje = 'Hola, ' + nombre;
     console.log('Se ha pulsado el botón', mensaje);
+    this.saludo.emit(mensaje);
   }
 }

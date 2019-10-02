@@ -12,9 +12,14 @@ export class AppComponent {
     { id: 2, nombre: 'Pepe' },
     { id: 3, nombre: 'Juan' }
   ];
+  mensaje: string;
 
   porCadaPersona(indice: number, persona: Persona): number {
     // console.log(indice, persona);
     return persona.id;
+  }
+
+  onSaludo(mensaje: string) {
+    this.mensaje = mensaje;
   }
 }
