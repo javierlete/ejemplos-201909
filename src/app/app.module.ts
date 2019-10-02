@@ -4,11 +4,15 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HijoComponent } from './hijo/hijo.component';
+import { HeroParentComponent } from './hero-parent.component';
+import { HeroChildComponent } from './hero-child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HijoComponent
+    HijoComponent,
+    HeroParentComponent,
+    HeroChildComponent
   ],
   imports: [
     BrowserModule,
